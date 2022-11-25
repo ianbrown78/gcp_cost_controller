@@ -5,7 +5,7 @@ class GoogleCloudSql:
     instance_client = None
 
     def __init__(self, credentials: google.auth.credentials.Credentials):
-        self.instance_client = googleapiclient.discovery.build('sqladmin', 'v1', credentials=credentials)
+        self.instance_client = googleapiclient.discovery.build('sqladmin', 'v1beta4', credentials=credentials)
 
     def list_instances(self, project_id: str):
         return self.instance_client.instances().list(project_id=project_id)
