@@ -1,4 +1,3 @@
-import base64
 import os
 import sys
 from google.cloud import secretmanager_v1
